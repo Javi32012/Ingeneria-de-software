@@ -1,0 +1,21 @@
+body {
+    background-color: gold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.tablaUno{
+    background-color: aquamarine; color: black;
+}
+.h1Principal{
+    background-color: darkblue;
+                    font-size: 42px;
+                    color: pink;
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-style: italic;
+                    font-weight: 100;
+                    line-height: normal;
+                    opacity: 0.5;
+                    letter-spacing: normal;
+                    text-align: justify;
+                    text-decoration: double;
+                    text-transform: lowercase;
+}
