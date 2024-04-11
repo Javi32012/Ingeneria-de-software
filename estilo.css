@@ -7,6 +7,9 @@ body {
     background-color: rgb(11, 252, 164); 
     color: black;
 }
+.tablaUno tr{
+    align-items: center;
+}
 .h1Principal{
     background-color: transparent;
                     font-size: 50px;
@@ -23,4 +26,7 @@ body {
 }
 body table{
     opacity: 0.9;
+}
+.imagenInicioIco img{
+    border-radius: 50%;
 }
