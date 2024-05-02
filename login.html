@@ -1,74 +1,81 @@
-<!DOCTYPE html>
 <html>
+    <head>
+        <title>Acceso principal</title>
+        <meta charset="utf-8">
+        <style>
+            .x{
+                padding: 30px;
+                border: 10px dotted blue;
+                margin: 25px 0px 25px 0px;
+            }
+        </style>
+        <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
+        <script>
+            function fun_ingresar(){
+                var usu = document.getElementById("usu").value;
+                var pass = document.getElementById("pass").value;
+                
+                var formdata = new FormData();
+                formdata.append("usu",usu);
+                formdata.append("pass",pass);
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Acceso Principal</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
-    <script src='main.js'></script>
-    <style>
-        .x{
-            padding: 20px;
-            border: 2px dotted;
-            margin: 25px 0 25px 0;
-            color: blue;
-            background-position: 50% 50%;
-            background-origin: border-box;
-        }
-    </style>
-</head>
 
-<body>
+                var ajax =  new XMLHttpRequest();
+                ajax.addEventListener("load", completeHandler, false);
+                ajax.addEventListener("error", errorHandler, false);
+                ajax.addEventListener("abort", abortHandler, false);
+                ajax.open("POST", "http://localhost/IS/index.php");
+                ajax.send(formdata);
+            }
+            function completeHandler(event){
+                document.getElementById("status").innerHTML = event.target.responseText;
+            }
+            function errorHandler(event){
+                document.getElementById("status").innerHTML = event.target.responseText;
+            }
+            function abortHandler(event){
+                document.getElementById("status").innerHTML = event.target.responseText;
+            }
+            
+        </script>
+    </head>
+    <body>
     <center>
-        <table class="tablaUno">
+        <table border="1" class="tablaUno">
             <tr>
                 <td colspan="2">
-                    <h1 class="h1Principal">Acceso Principal</h1>
+                    <h1>Acceso principal</h1>
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <div class="imagenInicioIco">
-                        <img src="Imagenes/imageninicio.ico" alt="imagen de inicio">
-                    </div>
-                </td>
+               <td colspan="2" class="imagenInicioIco">
+                <img src="Imagenes/imageninicio (1).ico">
+               </td> 
             </tr>
             <tr>
+                <td>Usuario:</td>
                 <td>
-                    <label>Usuario</label>
+                    <input type="text" id="usu">
                 </td>
-                <td>
-                    <input type="text" id="usuario" placeholder="Usuario">
-                </td>
-            </tr>
             <tr>
+            <tr>
+                <td>Constraseña:</td>
                 <td>
-                    <label>Contraseña</label>
-                </td>
-                <td>
-                    <input type="password" id="password" placeholder="Contraseña">
+                    <input type="text" id="pass">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="button" value="Ingresar" onclick="fun_Ingresar();"
+                    <input type="button" value="Ingresar" onclick="fun_ingresar();">
                 </td>
                 <td>
-                    <button>Cancelar</button>
+                    <input type="button" value="Cancelar">
+                           
                 </td>
             </tr>
         </table>
+        <p id="status"></p>
+        
     </center>
-    <h2 class="x">
-        <p>
-            hola Mundo
-        </p>
-    </h2>
-    <p class="x">
-        mi estilo empleando BOX Model
-    </p>
-</body>
-
+    </body>
 </html>

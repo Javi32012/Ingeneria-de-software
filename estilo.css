@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(44, 42, 38);
+    background-image: url(Imagenes/descarga.jpeg);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    opacity: 0.3;
 }
 .tablaUno{
+    margin: 15%;
     background-color: rgb(11, 252, 164); 
     color: black;
 }
