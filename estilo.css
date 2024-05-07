@@ -1,11 +1,13 @@
-body {
-    background-image: url(Imagenes/descarga.jpeg);
+body {/*
+    background-image: url(Imagenes/descarga.jpeg);*/
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 .tablaUno{
     margin: 15%;
-    background-color: rgb(11, 252, 164); 
+    background-color:white; 
     color: black;
+    opacity: 1
 }
 .tablaUno tr{
     align-items: center;
