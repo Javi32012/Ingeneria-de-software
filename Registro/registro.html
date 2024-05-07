@@ -7,11 +7,10 @@
     <title>Registrate</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/registro.css'>
-    <script src='../js/registro.js'></script>
 </head>
 
 <body>
-    <form>
+    <form id="formulario" class="formulario" method="post">
         <table border="1">
             <tr>
                 <td colspan="2">
@@ -20,7 +19,7 @@
             </tr>
             <tr>
                 <td>
-                    <label id="" class="" for="nombre">Nombre</label>
+                    <label id="" class="campo" for="nombre">Nombre</label>
                 </td>
                 <td>
                     <input type="text" placeholder="nombre" id="nombre" name="nombre" required>
@@ -28,46 +27,47 @@
             </tr>
             <tr>
                 <td>
-                    <label id="" class="" for="appat">Apellido Paterno</label>
+                    <label id="" class="campo" for="appat">Apellido Paterno</label>
                 </td>
                 <td>
-<input type="text" placeholder="Primer Apellido" id="appat" name="appat" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label id="" class="" for="">Apellido Materno</label>
-                </td>
-                <td>
-<input type="text" placeholder="nombre" id="" name="" required>
+                    <input type="text" placeholder="Primer Apellido" id="appat" name="appat" required>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label id="" class="" for="">Correo</label>
+                    <label id="" class="campo" for="apmat">Apellido Materno</label>
                 </td>
                 <td>
-<input type="text" placeholder="nombre" id="" name="" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label id="" class="" for="">Contraseña</label>
-                </td>
-                <td>
-<input type="text" placeholder="nombre" id="" name="" required>
+                    <input type="text" placeholder="Segundo Apellido" id="apmat" name="apmat" required>
                 </td>
             </tr>
             <tr>
                 <td>
-
+                    <label id="" class="campo" for="email">Correo</label>
                 </td>
                 <td>
-
+                    <input type="text" placeholder="Correo" id="email" name="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="" class="campo" for="password">Contraseña</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Contraseña" id="password" name="password" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" id="enviar" class="botonEnviar" value="Enviar">
+                </td>
+                <td>
+                    <button onclick="fun_Cancelar">Cancelar</button>
                 </td>
             </tr>
         </table>
     </form>
+    <script src='../js/registro.js'></script>
 </body>
 
 </html>
