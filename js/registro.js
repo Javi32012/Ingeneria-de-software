@@ -11,7 +11,7 @@ document.getElementById("formulario").addEventListener("submit", function (event
     ajax.addEventListener("load", completo_handler, false);
     ajax.addEventListener("error", error_handler, false);
     ajax.addEventListener("abort", abort_handler, false);
-    ajax.open("POST", "http://localhost/sitioMuebleria/registro.php");
+    ajax.open("POST", "http://localhost/IS/registroPersonas.php");
 
     var paqueteRegistro = new FormData();
     paqueteRegistro.append("nombre", nombre);
