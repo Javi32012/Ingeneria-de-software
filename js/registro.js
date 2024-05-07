@@ -21,6 +21,7 @@ document.getElementById("formulario").addEventListener("submit", function (event
     paqueteRegistro.append("password", password);
 
     ajax.send(paqueteRegistro);
+    alert("regsitro exitoso");
     
 });
 function completo_handler(e) {
